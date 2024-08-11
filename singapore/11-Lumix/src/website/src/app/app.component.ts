@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   connected: boolean | undefined = false;
 
-  visible: boolean = true;
+  visible: boolean = false;
 
   constructor(private walletService: WalletService, private router: Router) { }
 

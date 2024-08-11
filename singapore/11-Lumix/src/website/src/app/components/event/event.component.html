@@ -1,1 +1,14 @@
-<p>event works!</p>
+<div class="event m-2 p-2">
+    <div class="flex justify-content-between w-full">
+        <div class="w-full">{{event.name}}</div>
+        <div class="flex justify-content-end bg-gray-100">
+            <p-chart type="doughnut" [data]="data" [options]="options" [responsive]="true" [style]="{width: '50px'}" />
+        </div>
+    </div>
+    <div class="flex justify-content-between bg-blue-50">
+        <div class=""></div>
+        <div class="flex justify-content-end">
+            <p-button icon="pi pi-eye" text="true" rounded="true" />
+        </div>
+    </div>
+</div>

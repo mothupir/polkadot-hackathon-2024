@@ -9,7 +9,7 @@
       </div>
       <div class="p-toolbar-group-end">
           <p-button (onClick)="goToDashboard()" label="Dashboard" icon="pi pi-chart-bar" iconPos="right" raised="true" text="true" />
-          <p-button (onClick)="connect()" *ngIf="!connected" label="Login" icon="pi pi-sign-in" iconPos="right" class="ml-2" [raised]="true" severity="success" text="true" />
+          <p-button (onClick)="showConnectDialog()" *ngIf="!connected" label="Login" icon="pi pi-sign-in" iconPos="right" class="ml-2" [raised]="true" severity="success" text="true" />
           <p-button (onClick)="connect()" *ngIf="connected" label="Logout" icon="pi pi-sign-out" iconPos="right" class="ml-2" [raised]="true" severity="warning" text="true" />
       </div>
   </p-toolbar>
@@ -20,3 +20,17 @@
       <div class="text-xs font-italic text-600">Lumix &#64;{{getYear()}}</div>
   </footer>
 </div>
+
+<p-dialog 
+    header="Connect Wallet" 
+    [(visible)]="visible" 
+    (onShow)="loadButtons()"
+    [modal]="true" 
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+    [style]="{ width: '50vw' }" 
+    [draggable]="false" 
+    [resizable]="false">
+        <div class="flex flex-column gap-2 p-2" id="providerButtons">
+            <div class="text-xs">No supported wallet installed? Click <a href="https://metamask.io/download/" target="_blank">here</a> to install MetaMask.</div>
+        </div>
+</p-dialog>

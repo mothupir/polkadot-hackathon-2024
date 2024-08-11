@@ -43,3 +43,45 @@ button, input {
 .p-autocomplete input {
     width: 100%;
 }
+
+.connect-wrapper {
+    font-size: medium;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 1px 1px 4px 0px var(--purple-200);
+    border-radius: 5px;
+}
+
+.connect-details {
+    display: flex;
+    gap: 10px;
+}
+
+.connect-button {
+    border-radius: 5px;
+    width: 120px;
+    font-size: medium;
+    font-weight: 600;
+    border: none;
+    padding: 5px 10px;
+    background: var(--teal-300);
+    padding-top: 7px;
+    box-shadow: 1px 1px 4px 0px var(--purple-200);
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    box-shadow: 1px 1px 4px 2px var(--purple-200);
+}
+
+.connect-button img {
+    width: 22px;
+}
+
+.connect-button div {
+    margin: auto;
+    font-weight: 600;
+    font-size: medium;
+}

@@ -3,6 +3,7 @@ export interface Token {
     name: string;
     cost: number;
     total: number;
+    maximum: number;
     valid_from: Date;
     expiration: Date;
 }

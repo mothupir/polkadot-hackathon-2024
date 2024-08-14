@@ -1,5 +1,6 @@
 .event {
     border-radius: 5px;
+    margin-top: 5px;
     box-shadow: 2px 2px 6px -1px var(--purple-200) inset, 2px 2px 4px 0px var(--teal-200), -2px -2px 6px -1px var(--purple-200) inset;
     display: flex;
     flex-direction: column;
@@ -8,4 +9,16 @@
 .event:hover {
     box-shadow: 2px 2px 6px 1px var(--purple-200) inset, 2px 2px 6px 2px var(--teal-200), -2px -2px 6px 1px var(--purple-200) inset;
     transition: 0.6s;
+}
+
+.info {
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    border-top: 1px solid var(--teal-100);
+}
+
+.action {
+    align-items: center;
+    margin-right: 4px;
 }

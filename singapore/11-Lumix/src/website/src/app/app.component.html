@@ -16,13 +16,14 @@
 
   <router-outlet />
   
-  <footer class="flex justify-content-end w-12 mt-2 p-2 surface-50">
+  <footer class="flex justify-content-end w-12 mt-1 p-2 surface-50">
       <div class="text-xs font-italic text-600">Lumix &#64;{{getYear()}}</div>
   </footer>
 </div>
 
 <p-dialog 
-    header="Connect Wallet" 
+    header="Connect Wallet"
+    position="top"
     [(visible)]="visible" 
     (onShow)="loadButtons()"
     [modal]="true" 

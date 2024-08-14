@@ -8,7 +8,7 @@ export interface EventModel {
     description?: string;
     information?: string;
     start_time?: Date;
-    end?: Date;
+    end_time?: Date;
     deadline?: Date;
     location?: string;
     tokens?: Token;

@@ -1,14 +1,39 @@
-<div class="event m-2 p-2">
-    <div class="flex justify-content-between w-full">
-        <div class="w-full">{{event.name}}</div>
-        <div class="flex justify-content-end bg-gray-100">
+<div class="event mr-2 mb-2 p-2">
+    <div class="flex justify-content-between w-full gap-2">
+        <div class="w-full">
+            <div class="font-medium">{{event.name}}</div>
+            <div class="text-sm text-600">{{event.description}}</div>
+        </div>
+        <div class="flex justify-content-end mb-1">
             <p-chart type="doughnut" [data]="data" [options]="options" [responsive]="true" [style]="{width: '50px'}" />
         </div>
     </div>
-    <div class="flex justify-content-between bg-blue-50">
-        <div class=""></div>
-        <div class="flex justify-content-end">
-            <p-button icon="pi pi-eye" text="true" rounded="true" />
+    <div class="info flex justify-content-between">
+        <div class="text-xs">
+            <div class="flex gap-2 p-1">
+                <i class="pi pi-calendar-clock text-purple-500"></i>
+                <div class="">{{getDateTime(event.start_time)}}</div>
+            </div>
+            <div class="flex gap-2 p-1">
+                <i class="pi pi-map-marker text-blue-700"></i>
+                <div class="">{{event.location}}</div>
+            </div>
+        </div>
+        <div class="action flex justify-content-end gap-1">
+            <p-button (onClick)="displayEvent()" icon="pi pi-ethereum" label="Get Tokens" iconPos="right" text="true" raised="true" />
         </div>
     </div>
 </div>
+
+<p-dialog 
+    header="{{event.name}}"
+    [(visible)]="visible"
+    [modal]="true" 
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+    [style]="{ width: '50vw' }" 
+    [draggable]="false" 
+    [resizable]="false">
+        <div class="flex flex-column gap-2 p-2" id="providerButtons">
+            <div class="text-xs">No supported wallet installed? Click <a href="https://metamask.io/download/" target="_blank">here</a> to install MetaMask.</div>
+        </div>
+</p-dialog>
